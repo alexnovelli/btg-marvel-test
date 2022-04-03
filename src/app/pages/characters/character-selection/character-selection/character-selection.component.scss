@@ -1,8 +1,14 @@
+$header-height: 52px;
+$footer-height: 42px;
+
 :host {
   background: url('~/src/assets/images/background/marvel-black-white-wallpaper.jpg') no-repeat center center;
+  background-attachment: scroll;
   background-size: cover;
   display: flex;
-  height: 100%;
+  margin: $header-height 0 $footer-height;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .card {
@@ -11,7 +17,19 @@
 }
 
 .marvel-cards {
+  align-items: center;
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   margin-top: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  :host {
+    margin: 0;
+  }
+
+  .marvel-cards {
+    align-items: flex-start;
+    flex-flow: row;
+  }
 }

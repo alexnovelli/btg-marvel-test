@@ -5,7 +5,7 @@
   width: 216px;
 
   &:not(:last-child) {
-    margin-right: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -25,5 +25,15 @@
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
     transform: rotateX(10deg);
     transition: box-shadow 0.1s ease-in-out, transform 0.1s ease-in-out;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  :host {
+    margin-bottom: 0;
+  
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
   }
 }

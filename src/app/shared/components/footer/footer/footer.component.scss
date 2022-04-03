@@ -1,13 +1,18 @@
+@use 'src/assets/stylesheet/abstracts/colors';
+
 :host {
   background-color: #fff;
   bottom: 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
   height: 3rem;
   position: fixed;
   text-align: center;
   width: 100%;
+  z-index: 3;
 }
 
 p {
+  color: colors.$red;
   line-height: 3rem;
   margin-bottom: 0;
 }

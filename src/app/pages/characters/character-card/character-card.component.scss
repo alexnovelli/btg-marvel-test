@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  perspective: 1000px;
+  text-align: center;
+  width: 216px;
+
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.card-wrap {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  height: 324px;
+  margin-bottom: 0.5em;
+  overflow: hidden;
+  padding: 0;
+  transition: drop-shadow, transform 0.1s ease-in-out;
+  width: 216px;
+
+  &:hover {
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+    transform: rotateX(10deg);
+  }
+}

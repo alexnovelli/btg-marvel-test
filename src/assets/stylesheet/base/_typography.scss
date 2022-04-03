@@ -17,33 +17,16 @@ h6,
 body,
 p,
 label {
-  line-height: 1.2em;
-  margin: 0.2em 0 0.4em;
-}
-
-label {
-  display: inline-block;
+  line-height: 1em;
+  margin: 0;
+  margin-bottom: 0.4em;
 }
 
 h1,
 h2,
 h3 {
   font-family: 'Bebas Neue', cursive;
-}
-
-body,
-h4,
-h5,
-h6,
-body,
-label,
-input,
-select,
-textarea {
-  color: colors.$default;
-  font-family: 'Bebas Neue', cursive;
-  font-family: Roboto, sans-serif;
-  font-weight: 300;
+  margin-bottom: 0.2em;
 }
 
 h1,
@@ -63,11 +46,11 @@ sub {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 h2 {
-  font-size: 2.4rem;
+  font-size: 3rem;
 }
 
 h3 {
@@ -81,4 +64,23 @@ h4 {
 h5,
 h6 {
   font-size: 1.2rem;
+}
+
+body,
+h4,
+h5,
+h6,
+body,
+label,
+input,
+select,
+textarea {
+  color: colors.$default;
+  font-family: 'Bebas Neue', cursive;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+}
+
+label {
+  display: inline-block;
 }

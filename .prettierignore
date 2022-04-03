@@ -1,13 +1,3 @@
 package.json
 package-lock.json
-yarn.lock
 dist
-src/app/api
-build
-dist
-node_modules
-.github
-proxy.conf.json
-tsconfig.json
-tsconfig.app.json
-tsconfig.spec.json

@@ -1,4 +1,7 @@
-<label for="character-selection">Selecione uma personagem</label>
-<select name="character-selection" id="character-selection" *ngIf="charactersData.length">
-  <option *ngFor="let character of charactersData" [value]="character.id">{{character.name}}</option>
-</select>
+<div class="container">
+  <h1>Personagens MARVEL<sup>©</sup></h1>
+  <div><label for="character-selection">Selecione uma personagem para visualizar a lista de Comics</label></div>
+  <select name="character-selection" id="character-selection" *ngIf="charactersData.length">
+    <option *ngFor="let character of charactersData" [value]="character.id">{{character.name}}</option>
+  </select>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="card">
+        <h1>MARVEL Characters<sup>©</sup></h1>
+        <h5>Select a character to know more</h5>
+        <div *ngIf="charactersData?.length" class="marvel-cards">
+            <app-character-card
+                *ngFor="let character of charactersData; let i = index"
+                [characterName]="character.name"
+                [characterId]="character.id"
+                [imageUrl]="character.thumbnail.path"
+            ></app-character-card>
+        </div>
+    </div>
+</div>

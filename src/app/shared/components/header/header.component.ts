@@ -8,9 +8,21 @@ import { CharactersService } from '../../services/characters.service';
     styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+    public charactersList = [1009718, 1009351, 1009610];
     public charactersData: CharactersData[] = [];
 
     constructor(private charactersService: CharactersService) {
-        charactersService.apiData$.subscribe((data) => (this.charactersData = data));
+        this.getCharacters();
+    }
+
+    getCharacters() {
+        this.charactersList.forEach((id) => {
+            this.charactersService.getCharacterById(id).subscribe((response) => {
+                if (response) {
+                    this.charactersData.push(response);
+                }
+            });
+        });
+        this.charactersService.setData(this.charactersData);
     }
 }

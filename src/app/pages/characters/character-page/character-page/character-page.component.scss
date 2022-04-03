@@ -1,0 +1,64 @@
+@use 'src/assets/stylesheet/forward';
+
+:host {
+  background-color: forward.$red;
+  display: flex;
+  height: 100%;
+}
+
+.image-full-bg {
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.container {
+  justify-content: flex-end;
+}
+
+h1 {
+  color: #fff;
+  text-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+}
+
+p {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.content-right {
+  color: #fff;
+  text-align: right;
+  width: 100%;
+}
+
+a {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: inline-block;
+  font-family: forward.$bebas;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  padding: 0.2em 0.5em;
+  transition: background-color 0.2s linear;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.1s linear;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .image-full-bg {
+    background-size: contain;
+  }
+
+  .content-right {
+    width: 50%;
+  }
+}

@@ -32,4 +32,14 @@ export class CharactersService {
     setData(data: CharactersData[]) {
         this.apiData.next(data);
     }
+
+    getCharacterById(characterId: number): Observable<CharactersData> {
+        return this.http
+            .get<CharactersData>(`${this.url}/${characterId}`, {
+                params: {
+                    apikey: this.apiKey,
+                },
+            })
+            .pipe(map((response) => Object(response).data.results[0] as CharactersData));
+    }
 }

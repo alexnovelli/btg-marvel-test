@@ -1,34 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { finalize } from 'rxjs';
-import { CharactersData } from 'src/app/shared/models/characters';
-import { CharactersService } from 'src/app/shared/services/characters.service';
+import { Component } from '@angular/core';
 
 @Component({
     templateUrl: './characters.component.html',
     styleUrls: ['./characters.component.scss'],
 })
-export class CharactersComponent implements OnInit {
-    public charactersList = ['Wolverine', 'Hulk', 'Spider-Man (Peter Parker)'];
-    public charactersData: CharactersData[] = [];
-
-    constructor(private charactersService: CharactersService) {}
-
-    ngOnInit(): void {
-        this.getCharacters();
-    }
-
-    getCharacters() {
-        this.charactersList.forEach((character) => {
-            this.charactersService.getMarvelCharacters(character).subscribe((response) => {
-                if (response) {
-                    this.charactersData.push(response);
-                }
-            });
-        });
-        this.charactersService.setData(this.charactersData);
-    }
-
-    openCharacterPage(id: number) {
-        console.log(id);
-    }
+export class CharactersComponent {
+    constructor() {}
 }

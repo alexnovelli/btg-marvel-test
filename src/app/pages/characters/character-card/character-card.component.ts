@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-character-card',
@@ -10,9 +11,10 @@ export class CharacterCardComponent {
     @Input() imageUrl = '';
     @Input() characterId: number;
 
-    constructor() {}
+    constructor(private router: Router) {}
 
     openCharacterPage() {
-        console.log(this.characterId);
+        const url = 'personagem/' + this.characterId;
+        this.router.navigate([url]);
     }
 }

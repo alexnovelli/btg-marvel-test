@@ -3,7 +3,7 @@
     <ul class="flex flex-row">
         <li><a [routerLink]="['']">Home</a></li>
         <li>
-            Personagens
+            Characters
             <ul class="flex flex-column">
                 <li *ngFor="let character of charactersData">
                     <a [routerLink]="['personagem/', character.id]">{{ character.name }}</a>

@@ -1,14 +1,1 @@
-<div class="container">
-    <div class="card">
-        <h1>Personagens MARVEL<sup>©</sup></h1>
-        <h4>Selecione uma personagem para ver mais detalhes</h4>
-        <div *ngIf="charactersData?.length" class="marvel-cards">
-            <app-character-card
-                *ngFor="let character of charactersData; let i = index"
-                [characterName]="character.name"
-                [characterId]="character.id"
-                [imageUrl]="character.thumbnail.path"
-            ></app-character-card>
-        </div>
-    </div>
-</div>
+<router-outlet></router-outlet>

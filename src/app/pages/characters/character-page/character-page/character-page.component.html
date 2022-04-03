@@ -1,0 +1,10 @@
+<div [ngStyle]="{ 'background-image': imageUrl }" class="image-full-bg"></div>
+<div class="container flex flex-row" *ngIf="characterData">
+    <div class="content-right">
+        <h1>{{ characterData.name }}</h1>
+        <p>{{ characterData.description }}</p>
+        <p>
+            <a href="{{ characterComicsUrl }}" target="_blank">Access {{ characterData.name }} comics on Marvel website</a>
+        </p>
+    </div>
+</div>

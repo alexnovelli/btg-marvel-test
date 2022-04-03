@@ -18,11 +18,12 @@
   margin-bottom: 0.5em;
   overflow: hidden;
   padding: 0;
-  transition: drop-shadow, transform 0.1s ease-in-out;
+  transition: box-shadow 0.1s ease-in-out, transform 0.3s ease-in-out;
   width: 216px;
 
   &:hover {
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
     transform: rotateX(10deg);
+    transition: box-shadow 0.1s ease-in-out, transform 0.1s ease-in-out;
   }
 }

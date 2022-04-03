@@ -1,0 +1,14 @@
+<nav class="flex flex-row">
+    <img src="./assets/images/logos/marvel-logo.svg" alt="Marvel Logo" />
+    <ul class="flex flex-row">
+        <li><a [routerLink]="['']">Home</a></li>
+        <li>
+            Personagens
+            <ul class="flex flex-column">
+                <li *ngFor="let character of charactersData">
+                    <a [routerLink]="['personagem/', character.id]">{{ character.name }}</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>

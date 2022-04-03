@@ -1,0 +1,14 @@
+<nav>
+    <ul>
+        <li><a [routerLink]="['']">Home</a></li>
+        <li>
+            Personagens
+            <ul>
+                <li *ngFor="let character of charactersData">
+                    <a [routerLink]="['personagem/', character.id]">{{ character.name }}</a>
+                </li>
+            </ul>
+        </li>
+        <li><a [routerLink]="['/contato']">Fale com o dev</a></li>
+    </ul>
+</nav>

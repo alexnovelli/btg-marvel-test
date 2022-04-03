@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { finalize } from 'rxjs';
 import { CharactersData } from 'src/app/shared/models/characters';
 import { CharactersService } from 'src/app/shared/services/characters.service';
 
@@ -24,7 +25,7 @@ export class CharactersComponent implements OnInit {
                 }
             });
         });
-        console.log(this.charactersData);
+        this.charactersService.setData(this.charactersData);
     }
 
     openCharacterPage(id: number) {

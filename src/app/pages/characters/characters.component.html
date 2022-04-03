@@ -1,7 +1,14 @@
 <div class="container">
-  <h1>Personagens MARVEL<sup>©</sup></h1>
-  <div><label for="character-selection">Selecione uma personagem para visualizar a lista de Comics</label></div>
-  <select name="character-selection" id="character-selection" *ngIf="charactersData.length">
-    <option *ngFor="let character of charactersData" [value]="character.id">{{character.name}}</option>
-  </select>
+    <div class="card">
+        <h1>Personagens MARVEL<sup>©</sup></h1>
+        <h4>Selecione uma personagem para ver mais detalhes</h4>
+        <div *ngIf="charactersData?.length" class="marvel-cards">
+            <app-character-card
+                *ngFor="let character of charactersData; let i = index"
+                [characterName]="character.name"
+                [characterId]="character.id"
+                [imageUrl]="character.thumbnail.path"
+            ></app-character-card>
+        </div>
+    </div>
 </div>
